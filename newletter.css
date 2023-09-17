@@ -11,35 +11,33 @@ header {
     padding: 20px 0;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    background-color: #eee;
-}
-
-nav li {
-    margin: 0 10px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #555;
-}
-
-.newsletter-month {
-    margin: 20px;
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
     padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
+    margin-left: auto; /* Add margin-left: auto to push the container to the center */
+    margin-right: auto;
+}
+@media (max-width: 1024px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+.card {
+    background-color: #f7f7f7; /* Off-white background */
+    border: 1px solid #000; /* Black border */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.2s ease;
+    
+    
 }
 
-/* Add more CSS styling as needed */
+.card:hover {
+    transform: scale(1.05);
+}
