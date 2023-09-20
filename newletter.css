@@ -1,3 +1,5 @@
+/* In your existing CSS */
+
 /* Reset some default styles for the body and header */
 body, h1 {
     margin: 0;
@@ -11,7 +13,7 @@ header {
     padding: 20px 0;
 }
 
-.cards{
+.cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
@@ -20,11 +22,13 @@ header {
     margin-left: auto; /* Add margin-left: auto to push the container to the center */
     margin-right: auto;
 }
+
 @media (max-width: 1024px) {
     .card-container {
         grid-template-columns: 1fr;
     }
 }
+
 .card {
     background-color: #f7f7f7; /* Off-white background */
     border: 1px solid #000; /* Black border */
@@ -34,10 +38,27 @@ header {
     cursor: pointer;
     text-align: center;
     transition: transform 0.2s ease;
-    
-    
 }
 
 .card:hover {
     transform: scale(1.05);
+}
+
+/* Style the link (anchor) */
+.card a {
+    display: block;
+    margin-top: 15px; /* Slightly increase the top margin */
+    font-weight: bold;
+    color: #0078d4;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.card a:hover {
+    color: #0050a3;
+    text-decoration: none; /* Remove underline on hover */
+}
+
+#a-august-card {
+    text-decoration: none; color: inherit;
 }
